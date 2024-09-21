@@ -5,7 +5,7 @@ using Throw;
 
 namespace Test_ManagedCUDA;
 
-public static partial class ManagedCUDADemo
+public static class ManagedCUDADemo
 {
 	public static float[] Saxpy(int N, float A, float[] x, float[] y)
 	{

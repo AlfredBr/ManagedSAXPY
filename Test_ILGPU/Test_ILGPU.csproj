@@ -9,6 +9,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ILGpuDemo.cs" />
+    <Compile Remove="ILGpuDemo.MultiplyByTwoIntoSingleIntArray.cs" />
+    <Compile Remove="ILGpuDemo.VectorAdd.cs" />
+    <Compile Remove="ILGpuPuzzle.cs" />
+    <Compile Remove="ILGpuPuzzle.DenseXY.cs" />
+    <Compile Remove="ILGpuPuzzle.Puzzle1.cs" />
+    <Compile Remove="ILGpuPuzzle.Puzzle2a.cs" />
+    <Compile Remove="ILGpuPuzzle.Puzzle2b.cs" />
+    <Compile Remove="ILGpuPuzzle.Puzzle2c.cs" />
+    <Compile Remove="ILGpuPuzzle.Puzzle2d.cs" />
+    <Compile Remove="ILGpuPuzzle.Puzzle3.cs" />
+    <Compile Remove="ILGpuPuzzle.Puzzle4.cs" />
+    <Compile Remove="ILGpuPuzzle.Puzzle5.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="ILGPU" Version="1.5.1" />
     <PackageReference Include="ILGPU.Algorithms" Version="1.5.1" />
     <PackageReference Include="Throw" Version="1.4.0" />

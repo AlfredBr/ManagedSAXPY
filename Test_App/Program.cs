@@ -42,7 +42,9 @@ public static class Program
 		Console.WriteLine(divider);
 		Measure(() => Intrinsics.Saxpy256(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("SIMD256"));
 		Console.WriteLine(divider);
-		Measure(() => ComputeSharpDemo.Saxpy(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("ComputeSharp"));
+		Measure(() => ComputeSharpDemo.Saxpy1(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("ComputeSharp1"));
+		Console.WriteLine(divider);
+		Measure(() => ComputeSharpDemo.Saxpy2(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("ComputeSharp2"));
 		Console.WriteLine(divider);
 		Measure(() => ILGpuDemo.Saxpy(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("ILGpu"));
 		Console.WriteLine(divider);
