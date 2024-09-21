@@ -13,6 +13,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ComputeSharpDemo.cs" />
+    <Compile Remove="ComputeSharpDemo.Lenna.cs" />
+    <Compile Remove="ComputeSharpDemo.MultiplyByTwoIntoSingleIntArray.cs" />
+    <Compile Remove="ComputeSharpDemo.VectorAdd.cs" />
+    <Compile Remove="ComputeSharpPuzzle.cs" />
+    <Compile Remove="ComputeSharpPuzzle.Puzzle1.cs" />
+    <Compile Remove="ComputeSharpPuzzle.Puzzle2.cs" />
+    <Compile Remove="ComputeSharpPuzzle.Puzzle3.cs" />
+    <Compile Remove="ComputeSharpPuzzle.Puzzle4.cs" />
+    <Compile Remove="ComputeSharpPuzzle.Puzzle5.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="publish.ps1" />
   </ItemGroup>
 

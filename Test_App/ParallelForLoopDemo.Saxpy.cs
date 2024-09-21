@@ -1,6 +1,6 @@
 ﻿namespace Test_App;
 
-public static partial class ParallelForLoopDemo
+public static class ParallelFor
 {
     internal static float[] Saxpy(int N, float a, float[] x, float[] y)
     {

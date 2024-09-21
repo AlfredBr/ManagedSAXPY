@@ -11,7 +11,7 @@ namespace CppClassLibrary1
     public ref class CppClass1
     {
     public:
-        static array<float>^ Saxpy(int N, float a, array<float>^ x, array<float>^ y)
+        static array<float>^ Saxpy1(int N, float a, array<float>^ x, array<float>^ y)
         {
             // Check input arguments
             if (x->Length != N || y->Length != N)
@@ -37,6 +37,24 @@ namespace CppClassLibrary1
             for (int i = 0; i < N; ++i)
             {
                 y[i] = yVec[i];
+            }
+
+            // Return managed array
+            return y;
+        }
+
+        static array<float>^ Saxpy2(int N, float a, array<float>^ x, array<float>^ y)
+        {
+            // Check input arguments
+            if (x->Length != N || y->Length != N)
+            {
+                throw gcnew ArgumentException("Size of x and y must be equal to N");
+            }
+
+            // Perform SAXPY operation
+            for (int i = 0; i < N; ++i)
+            {
+                y[i] = a * x[i] + y[i];
             }
 
             // Return managed array

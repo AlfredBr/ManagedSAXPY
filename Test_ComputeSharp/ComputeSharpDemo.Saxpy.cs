@@ -1,11 +1,9 @@
 ﻿using ComputeSharp;
 using System.Diagnostics;
 
-using TerraFX.Interop.Windows;
-
 namespace Test_ComputeSharp;
 
-public static partial class ComputeSharpDemo
+public static class ComputeSharpDemo
 {
 	public static void Saxpy()
 	{

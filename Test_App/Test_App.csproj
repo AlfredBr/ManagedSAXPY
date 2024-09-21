@@ -9,6 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ForLoopDemo.cs" />
+    <Compile Remove="IntrinsicsDemo.cs" />
+    <Compile Remove="ParallelForLoopDemo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="lenna.jpg" />
+    <None Remove="lenna_bw.hlsl" />
+    <None Remove="lenna_bw.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CppClassLibrary1\CppClassLibrary1.vcxproj" />
     <ProjectReference Include="..\Test_ComputeSharp\Test_ComputeSharp.csproj" />
     <ProjectReference Include="..\Test_ILGPU\Test_ILGPU.csproj" />
