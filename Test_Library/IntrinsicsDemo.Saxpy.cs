@@ -6,7 +6,7 @@ namespace Test_App;
 
 public static class Intrinsics
 {
-	internal static float[] SaxpyVector(int N, float a, float[] x, float[] y)
+	public static float[] SaxpyVector(int N, float a, float[] x, float[] y)
 	{
 		// Ensure N is a multiple of the vector size for simplicity
 		int vectorSize = Vector<float>.Count;
@@ -31,7 +31,7 @@ public static class Intrinsics
 
 		return result;
 	}
-	internal static float[] SaxpyMultiplyAdd(int N, float a, float[] x, float[] y)
+	public static float[] SaxpyMultiplyAdd(int N, float a, float[] x, float[] y)
 	{
 		// Ensure AVX2 is supported
 		if (!Avx2.IsSupported)
@@ -62,7 +62,7 @@ public static class Intrinsics
 
 		return result;
 	}
-	internal static double[] SaxpyMultiplyAddUsingPointers(int N, double a, double[] x, double[] y)
+	public static double[] SaxpyMultiplyAddUsingPointers(int N, double a, double[] x, double[] y)
 	{
 		// Ensure AVX is supported
 		if (!Avx.IsSupported)
@@ -96,7 +96,7 @@ public static class Intrinsics
 		}
 		return result;
 	}
-	internal static float[] Saxpy128(int N, float a, float[] x, float[] y)
+	public static float[] Saxpy128(int N, float a, float[] x, float[] y)
 	{
 		// Ensure SSE is supported
 		if (!Sse.IsSupported)
@@ -128,7 +128,7 @@ public static class Intrinsics
 		}
 		return result;
 	}
-	internal static float[] Saxpy256(int N, float a, float[] x, float[] y)
+	public static float[] Saxpy256(int N, float a, float[] x, float[] y)
 	{
 		// Ensure AVX2 is supported
 		if (!Avx2.IsSupported)
@@ -155,7 +155,7 @@ public static class Intrinsics
 		}
 		return result;
 	}
-	internal static float[] Saxpy512(int N, float a, float[] x, float[] y)
+	public static float[] Saxpy512(int N, float a, float[] x, float[] y)
 	{
 		// Ensure AVX-512 is supported
 		if (!Avx512F.IsSupported)

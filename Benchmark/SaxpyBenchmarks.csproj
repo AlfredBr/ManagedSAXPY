@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\CppClassLibrary1\CppClassLibrary1.vcxproj" />
+		<ProjectReference Include="..\Test_ComputeSharp\Test_ComputeSharp.csproj" />
+		<ProjectReference Include="..\Test_ILGPU\Test_ILGPU.csproj" />
+		<ProjectReference Include="..\Test_Library\Test_Library.csproj" />
+		<ProjectReference Include="..\Test_ManagedCUDA\Test_ManagedCUDA.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.14.0" />
+  </ItemGroup>
+
+</Project>

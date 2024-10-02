@@ -3,6 +3,7 @@
 using Test_ComputeSharp;
 
 using Test_ILGPU;
+using Test_Library;
 
 using Test_ManagedCUDA;
 

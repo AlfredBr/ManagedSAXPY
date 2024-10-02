@@ -13,7 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_ManagedCUDA", "Test_Ma
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CudaRuntime1", "CudaRuntime1\CudaRuntime1.vcxproj", "{1080B02F-8C95-4F94-A570-ED995E8CD611}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cpp", "CppClassLibrary1\CppClassLibrary1.vcxproj", "{F5B05242-0BC5-4703-88A5-B8360DBF8182}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppClassLibrary1", "CppClassLibrary1\CppClassLibrary1.vcxproj", "{F5B05242-0BC5-4703-88A5-B8360DBF8182}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaxpyBenchmarks", "Benchmark\SaxpyBenchmarks.csproj", "{198CF909-E3A4-4005-B72A-78B04BB40B9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Library", "Test_Library\Test_Library.csproj", "{DED1E309-6BF1-488A-85C3-45FC4127015A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +101,30 @@ Global
 		{F5B05242-0BC5-4703-88A5-B8360DBF8182}.Release|x64.Build.0 = Release|x64
 		{F5B05242-0BC5-4703-88A5-B8360DBF8182}.Release|x86.ActiveCfg = Release|Win32
 		{F5B05242-0BC5-4703-88A5-B8360DBF8182}.Release|x86.Build.0 = Release|Win32
+		{198CF909-E3A4-4005-B72A-78B04BB40B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{198CF909-E3A4-4005-B72A-78B04BB40B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{198CF909-E3A4-4005-B72A-78B04BB40B9A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{198CF909-E3A4-4005-B72A-78B04BB40B9A}.Debug|x64.Build.0 = Debug|Any CPU
+		{198CF909-E3A4-4005-B72A-78B04BB40B9A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{198CF909-E3A4-4005-B72A-78B04BB40B9A}.Debug|x86.Build.0 = Debug|Any CPU
+		{198CF909-E3A4-4005-B72A-78B04BB40B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{198CF909-E3A4-4005-B72A-78B04BB40B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{198CF909-E3A4-4005-B72A-78B04BB40B9A}.Release|x64.ActiveCfg = Release|Any CPU
+		{198CF909-E3A4-4005-B72A-78B04BB40B9A}.Release|x64.Build.0 = Release|Any CPU
+		{198CF909-E3A4-4005-B72A-78B04BB40B9A}.Release|x86.ActiveCfg = Release|Any CPU
+		{198CF909-E3A4-4005-B72A-78B04BB40B9A}.Release|x86.Build.0 = Release|Any CPU
+		{DED1E309-6BF1-488A-85C3-45FC4127015A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED1E309-6BF1-488A-85C3-45FC4127015A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DED1E309-6BF1-488A-85C3-45FC4127015A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DED1E309-6BF1-488A-85C3-45FC4127015A}.Debug|x64.Build.0 = Debug|Any CPU
+		{DED1E309-6BF1-488A-85C3-45FC4127015A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DED1E309-6BF1-488A-85C3-45FC4127015A}.Debug|x86.Build.0 = Debug|Any CPU
+		{DED1E309-6BF1-488A-85C3-45FC4127015A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DED1E309-6BF1-488A-85C3-45FC4127015A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DED1E309-6BF1-488A-85C3-45FC4127015A}.Release|x64.ActiveCfg = Release|Any CPU
+		{DED1E309-6BF1-488A-85C3-45FC4127015A}.Release|x64.Build.0 = Release|Any CPU
+		{DED1E309-6BF1-488A-85C3-45FC4127015A}.Release|x86.ActiveCfg = Release|Any CPU
+		{DED1E309-6BF1-488A-85C3-45FC4127015A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
