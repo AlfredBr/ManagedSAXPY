@@ -8,7 +8,6 @@
   </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\CppClassLibrary1\CppClassLibrary1.vcxproj" />
         <ProjectReference Include="..\Test_ComputeSharp\Test_ComputeSharp.csproj" />
         <ProjectReference Include="..\Test_ILGPU\Test_ILGPU.csproj" />
         <ProjectReference Include="..\Test_ManagedCUDA\Test_ManagedCUDA.csproj" />
