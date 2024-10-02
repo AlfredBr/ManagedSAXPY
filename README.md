@@ -8,7 +8,7 @@
 - [ILGPU](https://ilgpu.net/docs/)
 - [ComputeSharp WIKI](https://github.com/Sergio0694/ComputeSharp/wiki/3.-Getting-started-%F0%9F%93%96)
 - [HLSL Wiki](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Compute_Shaders)
-- [HLSL @ WikiPedia Page](https://en.wikipedia.org/wiki/High-Level_Shader_Language)
+- [HLSL @ WikiPedia](https://en.wikipedia.org/wiki/High-Level_Shader_Language)
 - [HLSL @ Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl)
 ### Articles
 - [HackerNews](https://news.ycombinator.com/item?id=40393873)
