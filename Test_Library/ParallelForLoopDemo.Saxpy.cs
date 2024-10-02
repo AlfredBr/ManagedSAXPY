@@ -1,8 +1,8 @@
-﻿namespace Test_App;
+﻿namespace Test_Library;
 
-public static partial class ParallelForLoopDemo
+public static class ParallelFor
 {
-    internal static float[] Saxpy(int N, float a, float[] x, float[] y)
+    public static float[] Saxpy(int N, float a, float[] x, float[] y)
     {
         var result = new float[N];
         Parallel.For(0, N, i =>

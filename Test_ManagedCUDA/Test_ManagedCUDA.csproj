@@ -8,15 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ManagedCuda-12" Version="12.4.57" />
-    <PackageReference Include="ManagedCuda-CUBLAS" Version="12.4.57" />
-    <PackageReference Include="Throw" Version="1.4.0" />
+    <Compile Remove="ManagedCUDADemo.cs" />
+    <Compile Remove="ManagedCUDADemo.VectorAdd.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="vectorAdd.ptx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Remove="vectorAdd.ptx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ManagedCuda-12" Version="12.4.57" />
+    <PackageReference Include="ManagedCuda-CUBLAS" Version="12.4.57" />
+    <PackageReference Include="Throw" Version="1.4.0" />
   </ItemGroup>
 
 </Project>

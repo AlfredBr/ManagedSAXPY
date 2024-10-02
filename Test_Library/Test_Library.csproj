@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Test_ComputeSharp\Test_ComputeSharp.csproj" />
+        <ProjectReference Include="..\Test_ILGPU\Test_ILGPU.csproj" />
+        <ProjectReference Include="..\Test_ManagedCUDA\Test_ManagedCUDA.csproj" />
+    </ItemGroup>
+
+</Project>

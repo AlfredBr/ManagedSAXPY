@@ -5,7 +5,7 @@ using Throw;
 
 namespace Test_ManagedCUDA;
 
-public static partial class ManagedCUDADemo
+public static class ManagedCUDADemo
 {
 	public static float[] Saxpy(int N, float A, float[] x, float[] y)
 	{
@@ -13,9 +13,12 @@ public static partial class ManagedCUDADemo
 		const int deviceID = 0;
 		var context = new PrimaryContext(deviceID);
 		context.SetCurrent();
+
 		// load ptx file
-		const string ptxFile = @"E:\Test.GPU\Test_App\bin\Debug\net8.0-windows\saxpy.ptx";
+		//const string ptxFile = @"E:\Test.GPU\Test_App\bin\Debug\net8.0-windows\saxpy.ptx";
+		var ptxFile = Path.Combine(Environment.CurrentDirectory, "saxpy.ptx");
 		File.Exists(ptxFile).Throw(_ => throw new FileNotFoundException(ptxFile)).IfFalse();
+
 		// load kernel
 		var kernel = context.LoadKernel(ptxFile, "Saxpy");
 		kernel.GridDimensions = (N + 255) / 256;

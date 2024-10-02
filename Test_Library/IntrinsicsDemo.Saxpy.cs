@@ -2,11 +2,11 @@
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 
-namespace Test_App;
+namespace Test_Library;
 
-public static partial class IntrinsicsDemo
+public static class Intrinsics
 {
-	internal static float[] SaxpyVector(int N, float a, float[] x, float[] y)
+	public static float[] SaxpyVector(int N, float a, float[] x, float[] y)
 	{
 		// Ensure N is a multiple of the vector size for simplicity
 		int vectorSize = Vector<float>.Count;
@@ -14,9 +14,11 @@ public static partial class IntrinsicsDemo
 		{
 			throw new ArgumentException($"N must be a multiple of {vectorSize}");
 		}
+
 		// Initialize arrays
 		var result = new float[N];
 		var va = new Vector<float>(a);
+
 		// Perform SIMD addition
 		for (int i = 0; i < N; i += vectorSize)
 		{
@@ -26,23 +28,27 @@ public static partial class IntrinsicsDemo
 			// Store the result back into the array
 			vc.CopyTo(result, i);
 		}
+
 		return result;
 	}
-	internal static float[] SaxpyMultiplyAdd(int N, float a, float[] x, float[] y)
+	public static float[] SaxpyMultiplyAdd(int N, float a, float[] x, float[] y)
 	{
 		// Ensure AVX2 is supported
 		if (!Avx2.IsSupported)
 		{
 			throw new PlatformNotSupportedException("AVX2 is not supported on this platform.");
 		}
+
 		// Ensure N is a multiple of 8 for simplicity
 		if (N % 8 != 0)
 		{
 			throw new ArgumentException("N must be a multiple of 8");
 		}
+
 		// Initialize arrays
 		var result = new float[N];
 		var va = Vector256.Create(a);
+
 		// Perform SIMD Fused Multiply-Add
 		for (int i = 0; i < N; i += 8)
 		{
@@ -53,9 +59,10 @@ public static partial class IntrinsicsDemo
 			// Store the result back into the array
 			vc.CopyTo(result, i);
 		}
+
 		return result;
 	}
-	internal static double[] SaxpyMultiplyAddUsingPointers(int N, double a, double[] x, double[] y)
+	public static double[] SaxpyMultiplyAddUsingPointers(int N, double a, double[] x, double[] y)
 	{
 		// Ensure AVX is supported
 		if (!Avx.IsSupported)
@@ -89,7 +96,7 @@ public static partial class IntrinsicsDemo
 		}
 		return result;
 	}
-	internal static float[] Saxpy128(int N, float a, float[] x, float[] y)
+	public static float[] Saxpy128(int N, float a, float[] x, float[] y)
 	{
 		// Ensure SSE is supported
 		if (!Sse.IsSupported)
@@ -121,7 +128,7 @@ public static partial class IntrinsicsDemo
 		}
 		return result;
 	}
-	internal static float[] Saxpy256(int N, float a, float[] x, float[] y)
+	public static float[] Saxpy256(int N, float a, float[] x, float[] y)
 	{
 		// Ensure AVX2 is supported
 		if (!Avx2.IsSupported)
@@ -148,7 +155,7 @@ public static partial class IntrinsicsDemo
 		}
 		return result;
 	}
-	internal static float[] Saxpy512(int N, float a, float[] x, float[] y)
+	public static float[] Saxpy512(int N, float a, float[] x, float[] y)
 	{
 		// Ensure AVX-512 is supported
 		if (!Avx512F.IsSupported)
