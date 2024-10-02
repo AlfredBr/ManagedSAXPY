@@ -1,4 +1,4 @@
-﻿namespace Test_App;
+﻿namespace Test_Library;
 
 public static class ParallelFor
 {

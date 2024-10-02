@@ -1,6 +1,6 @@
-﻿namespace Test_App;
+﻿namespace Test_Library;
 
-public static class ForLoopDemo
+public static class ForLoop
 {
 	public static float[] Saxpy(int N, float a, float[] x, float[] y)
 	{

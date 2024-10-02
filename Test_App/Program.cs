@@ -8,6 +8,7 @@ using Test_Library;
 using Test_ManagedCUDA;
 
 using CppClassLibrary1;
+using Throw;
 
 namespace Test_App;
 
@@ -27,9 +28,13 @@ public static class Program
 		const int expectedLength = 5;
 		var expected = arrayX.Select((x, i) => (A * x) + arrayY[i]).Last(expectedLength);
 
-		Measure(() => LinqDemo.Saxpy(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("LinqDemo"));
+		const string ptxFile = @"E:\ManagedSAXPY\CudaRuntime1\x64\Debug\saxpy.ptx";
+		File.Exists(ptxFile).Throw(_ => throw new FileNotFoundException(ptxFile)).IfFalse();
+		File.Copy(ptxFile, Path.Combine(Environment.CurrentDirectory, "saxpy.ptx"), true);
+
+		Measure(() => Linq.Saxpy(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("LinqDemo"));
 		Console.WriteLine(divider);
-		Measure(() => ForLoopDemo.Saxpy(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("ForLoop"));
+		Measure(() => ForLoop.Saxpy(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("ForLoop"));
 		Console.WriteLine(divider);
 		Measure(() => ParallelFor.Saxpy(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("ParallelForLoop"));
 		Console.WriteLine(divider);

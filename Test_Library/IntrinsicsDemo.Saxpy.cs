@@ -2,7 +2,7 @@
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 
-namespace Test_App;
+namespace Test_Library;
 
 public static class Intrinsics
 {
