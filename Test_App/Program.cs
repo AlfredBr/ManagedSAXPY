@@ -54,7 +54,9 @@ public static class Program
 		Console.WriteLine(divider);
 		Measure(() => ILGpuDemo.Saxpy(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("ILGpu"));
 		Console.WriteLine(divider);
-		Measure(() => ManagedCUDADemo.Saxpy(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("ManagedCUDA"));
+		Measure(() => ManagedCUDADemo.Saxpy(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("ManagedCUDA Saxpy"));
+		Console.WriteLine(divider);
+		Measure(() => ManagedCUDADemo.Fma(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("ManagedCUDA Fma"));
 		Console.WriteLine(divider);
 		Measure(() => ManagedCUDADemo.CuBlasSaxpy(N, A, arrayX, arrayY).Last(expectedLength).Check1D(expected).Print("ManagedCuBlas"));
 		Console.WriteLine(divider);

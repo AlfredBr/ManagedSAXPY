@@ -35,6 +35,34 @@ public static class ManagedCUDADemo
 		return hostS;
 	}
 
+	public static float[] Fma(int N, float A, float[] x, float[] y)
+	{
+		// create a new context
+		const int deviceID = 0;
+		var context = new PrimaryContext(deviceID);
+		context.SetCurrent();
+
+		// load ptx file
+		//const string ptxFile = @"E:\Test.GPU\Test_App\bin\Debug\net8.0-windows\saxpy.ptx";
+		var ptxFile = Path.Combine(Environment.CurrentDirectory, "fma.ptx");
+		File.Exists(ptxFile).Throw(_ => throw new FileNotFoundException(ptxFile)).IfFalse();
+
+		// load kernel
+		var kernel = context.LoadKernel(ptxFile, "Fma");
+		kernel.GridDimensions = (N + 255) / 256;
+		kernel.BlockDimensions = 256;
+		// allocate vectors in device memory and copy vectors from host memory to device memory
+		CudaDeviceVariable<float> deviceX = x;
+		CudaDeviceVariable<float> deviceY = y;
+		CudaDeviceVariable<float> deviceS = new(N);
+		deviceS.Memset(0);
+		// invoke kernel
+		kernel.Run(N, A, deviceS.DevicePointer, deviceX.DevicePointer, deviceY.DevicePointer);
+		// copy result from device memory to hostC (contains the result in host memory)
+		float[] hostS = deviceS;
+		return hostS;
+	}
+
 	public static float[] CuBlasSaxpy(int _, float A, float[] x, float[] y)
 	{
 		// create a new CudaBlas instance

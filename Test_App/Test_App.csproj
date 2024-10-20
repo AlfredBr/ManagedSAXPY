@@ -21,6 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="OneOf" Version="3.0.271" />
+    <PackageReference Include="TerraFX.Interop.Windows" Version="10.0.26100" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CppClassLibrary1\CppClassLibrary1.vcxproj" />
     <ProjectReference Include="..\Test_ComputeSharp\Test_ComputeSharp.csproj" />
     <ProjectReference Include="..\Test_ILGPU\Test_ILGPU.csproj" />

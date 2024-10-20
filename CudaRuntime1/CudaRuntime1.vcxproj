@@ -81,6 +81,7 @@
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <CudaCompile Include="fma.cu" />
     <CudaCompile Include="saxpy.cu" />
   </ItemGroup>
   <ItemGroup>

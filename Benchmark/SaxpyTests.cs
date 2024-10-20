@@ -36,6 +36,7 @@ public class SaxpyTests
 	[Benchmark] public float[] ComputeSharp_Saxpy2() => ComputeSharpDemo.Saxpy2(N, A, arrayX, arrayY);
 	[Benchmark] public float[] ILGpu_Saxpy() => ILGpuDemo.Saxpy(N, A, arrayX, arrayY);
 	[Benchmark] public float[] ManagedCUDA_Saxpy() => ManagedCUDADemo.Saxpy(N, A, arrayX, arrayY);
+	[Benchmark] public float[] ManagedCUDA_Fma() => ManagedCUDADemo.Fma(N, A, arrayX, arrayY);
 	[Benchmark] public float[] ManagedCUDA_CuBlas_Saxpy() => ManagedCUDADemo.CuBlasSaxpy(N, A, arrayX, arrayY);
 
 	//[Benchmark] public float[] CppClass1_Saxpy1() => CppClass1.Saxpy1(N, A, arrayX, arrayY);

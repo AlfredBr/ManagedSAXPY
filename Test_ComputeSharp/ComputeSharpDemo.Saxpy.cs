@@ -37,13 +37,21 @@ public static class ComputeSharpDemo
 	}
 }
 
-[AutoConstructor]
+[ThreadGroupSize(DefaultThreadGroupSizes.X)]
+[GeneratedComputeShaderDescriptor]
 [System.Runtime.Versioning.SupportedOSPlatform("windows")]
 internal readonly partial struct SaxpyKernel : IComputeShader
 {
 	private readonly float a;
 	private readonly ReadWriteBuffer<float> x;
 	private readonly ReadWriteBuffer<float> y;
+
+	public SaxpyKernel(float a, ReadWriteBuffer<float> deviceX, ReadWriteBuffer<float> deviceY) : this()
+	{
+		this.a = a;
+		this.x = deviceX;
+		this.y = deviceY;
+	}
 
 	public void Execute()
 	{
@@ -52,12 +60,19 @@ internal readonly partial struct SaxpyKernel : IComputeShader
 	}
 }
 
-[AutoConstructor]
+[ThreadGroupSize(DefaultThreadGroupSizes.X)]
+[GeneratedComputeShaderDescriptor]
 [System.Runtime.Versioning.SupportedOSPlatform("windows")]
 internal readonly partial struct SaxpyCompute : IComputeShader
 {
 	private readonly float a;
 	private readonly ReadWriteBuffer<SaxpyModel> buffer;
+
+	public SaxpyCompute(float a, ReadWriteBuffer<SaxpyModel> deviceBuffer) : this()
+	{
+		this.a = a;
+		this.buffer = deviceBuffer;
+	}
 
 	public void Execute()
 	{
