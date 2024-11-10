@@ -66,16 +66,16 @@ public static class ManagedCUDADemo
 	public static float[] CuBlasSaxpy(int _, float A, float[] x, float[] y)
 	{
 		// create a new CudaBlas instance
-		var blas = new CudaBlas();
+		var cuBlas = new CudaBlas();
 		// allocate device memory and copy data from host to device
 		CudaDeviceVariable<float> deviceX = x;
 		CudaDeviceVariable<float> deviceY = y;
 		// perform SAXPY operation
-		blas.Axpy(A, deviceX, 1, deviceY, 1);
+		cuBlas.Axpy(A, deviceX, 1, deviceY, 1);
 		// copy result from device memory to host memory
 		float[] hostArray = deviceY;
 		// free device memory
-		blas.Dispose();
+		cuBlas.Dispose();
 		// return the result
 		return hostArray;
 	}
