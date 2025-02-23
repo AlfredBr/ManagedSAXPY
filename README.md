@@ -2,7 +2,7 @@
 
 ![SAXPY Image](https://developer-blogs.nvidia.com/wp-content/uploads/2021/03/SAXPY.png)
 
-What is SAXPY?  [Single precision A * X + Y.](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms#Level_1)  [We do this all the time.](https://en.wikipedia.org/wiki/Multiply%E2%80%93accumulate_operation)
+What is SAXPY?  Single precision [A * X + Y.](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms#Level_1)  We do this [all the time.](https://en.wikipedia.org/wiki/Multiply%E2%80%93accumulate_operation)  There is even [hardware support for it](https://en.wikipedia.org/wiki/FMA_instruction_set).
 
 Here are some great articles from the folks at nVidia.
 
