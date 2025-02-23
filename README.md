@@ -2,7 +2,7 @@
 
 ![SAXPY Image](https://developer-blogs.nvidia.com/wp-content/uploads/2021/03/SAXPY.png)
 
-What is SAXPY?  Single precision A * X + Y.  We do this all the time.
+What is SAXPY?  Single precision A * X + Y.  [We do this all the time.](https://en.wikipedia.org/wiki/Multiply%E2%80%93accumulate_operation)
 
 Here are some great articles from the folks at nVidia.
 
