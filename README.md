@@ -14,6 +14,7 @@ I want to add to this discussion and this repo demonstrates a few more ways to S
 - [ILGPU](https://ilgpu.net/)
 - [ComputeSharp](https://github.com/Sergio0694/ComputeSharp)
 - [ManagedCuda](https://github.com/kunzmi/managedCuda)
+- [System.Runtime.Intrinsics](https://learn.microsoft.com/en-us/dotnet/api/system.runtime.intrinsics.x86.fma.multiplyadd?view=net-9.0)
 - [MathNet.Numerics](https://numerics.mathdotnet.com/)
 ### Docs
 - [ILGPU](https://ilgpu.net/docs/)
