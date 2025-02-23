@@ -8,7 +8,7 @@ Here are some great articles from the folks at nVidia.
 - [Six Ways to SAXPY](https://developer.nvidia.com/blog/six-ways-saxpy/)
 
 ## You can SAXPY quickly via Managed C# GPU Programming
-I want to add to this discussion and this repo demonstrates a few more ways to SAXPY in C# / .NET / Managed Code.
+I want to add to this discussion and this repo demonstrates a few more ways to SAXPY in C# / .NET / Managed Code.  (The repo is a little messy, I'll clean it up soon.)
 
 ### Libraries / Frameworks
 - [ILGPU](https://ilgpu.net/)
