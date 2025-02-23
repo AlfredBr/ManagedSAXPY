@@ -2,7 +2,10 @@
 
 ![SAXPY Image](https://developer-blogs.nvidia.com/wp-content/uploads/2021/03/SAXPY.png)
 
+What is SAXPY?  Single precision A * X + Y.  We do this all the time.
+
 Here are some great articles from the folks at nVidia.
+
 - [N Ways to SAXPY: Demonstrating the Breadth of GPU Programming Options](https://developer.nvidia.com/blog/n-ways-to-saxpy-demonstrating-the-breadth-of-gpu-programming-options/)
 - [Six Ways to SAXPY](https://developer.nvidia.com/blog/six-ways-saxpy/)
 
