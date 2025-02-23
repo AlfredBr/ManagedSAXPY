@@ -1,4 +1,15 @@
+# What is SAXPY?
+
+[SAXPY Image](https://developer-blogs.nvidia.com/wp-content/uploads/2021/03/SAXPY.png)
+
+Here are some great articles from the folks at nVidia.
+- [N Ways to SAXPY: Demonstrating the Breadth of GPU Programming Options](https://developer.nvidia.com/blog/n-ways-to-saxpy-demonstrating-the-breadth-of-gpu-programming-options/)
+- [Six Ways to SAXPY](https://developer.nvidia.com/blog/six-ways-saxpy/)
+
 ## Managed C# GPU Programming
+
+
+
 ### Libraries / Frameworks
 - [ILGPU](https://ilgpu.net/)
 - [ComputeSharp](https://github.com/Sergio0694/ComputeSharp)
