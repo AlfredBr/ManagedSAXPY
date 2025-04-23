@@ -32,6 +32,7 @@ public class SaxpyTests
 	[Benchmark] public float[] Intrinsics_SaxpyMultiplyAdd() => Intrinsics.SaxpyMultiplyAdd(N, A, arrayX, arrayY);
 	[Benchmark] public float[] Intrinsics_Saxpy128() => Intrinsics.Saxpy128(N, A, arrayX, arrayY);
 	[Benchmark] public float[] Intrinsics_Saxpy256() => Intrinsics.Saxpy256(N, A, arrayX, arrayY);
+	[Benchmark] public float[] Intrinsics_Saxpy512() => Intrinsics.Saxpy512(N, A, arrayX, arrayY);
 	[Benchmark] public float[] ComputeSharp_Saxpy1() => ComputeSharpDemo.Saxpy1(N, A, arrayX, arrayY);
 	[Benchmark] public float[] ComputeSharp_Saxpy2() => ComputeSharpDemo.Saxpy2(N, A, arrayX, arrayY);
 	[Benchmark] public float[] ILGpu_Saxpy() => ILGpuDemo.Saxpy(N, A, arrayX, arrayY);
